@@ -30,7 +30,7 @@
 	<munit:dynamic-port propertyName="http.port"/>
 
     <http:request-config name="HTTP_Request_Configuration">
-        <http:request-connection host="0.0.0.0" port="${https.port}" protocol="${httpprotocol}">
+        <http:request-connection host="0.0.0.0" port="${http.port}" protocol="${httpprotocol}">
 		</http:request-connection>
     </http:request-config>
     
