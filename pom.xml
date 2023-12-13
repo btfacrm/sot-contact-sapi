@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>078efef1-d139-48ed-92f5-f8d4a0592374</groupId>
 	<artifactId>sot-contact-sapi-asset</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.1</version>
 	<packaging>mule-application</packaging>
 
 	<name>sot-contact-sapi</name>
@@ -23,6 +23,8 @@
 		<categories key="Asset type">API</categories>
 		<tags>SqlServer, sapi, System, Contact, template</tags>
 		<fields key="sourceCode">https://github.com/btfacrm/cot-contact-sapi</fields>
+
+		<codecoverage.application>75</codecoverage.application>
 
 		<!-- RAML specification -->
 		<restconnector.api.spec.group>${project.groupId}</restconnector.api.spec.group>
