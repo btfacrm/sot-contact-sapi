@@ -40,8 +40,10 @@
 			<munit:enable-flow-source value="api-main" />
 			<munit:enable-flow-source value="api-console"/>
 			<munit:enable-flow-source value="get:\contact:api-config" />
+			<munit:enable-flow-source value="get:\contact\(id):api-config" />
 			<munit:enable-flow-source value="query" />
 			<munit:enable-flow-source value="get-by-filter" />
+			<munit:enable-flow-source value="get-by-id" />
 		</munit:enable-flow-sources>
 
 		<munit:behavior >
@@ -96,10 +98,14 @@
 			level="INFO"  
 			message='#[payload]' />
 		
+		<logger doc:name="result"
+			level="INFO"  
+			message='#["id=" ++ (payload.id as String)]' />
+
 		<validation:is-true
 			doc:name="id's are equal?"
 			config-ref="Validation_Config"
-			expression="#[vars.sourcePayload.id == payload[0].id]" />
+			expression="#[vars.sourcePayload.id == payload.id]" />
 
 		<!-- ***************** -->
 		<!-- query by filter   -->
