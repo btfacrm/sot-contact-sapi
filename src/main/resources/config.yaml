@@ -1,0 +1,17 @@
+# The RAML API and autodiscovery
+api:  
+  group: "${restconnector.api.spec.group}"
+  artifact: "${restconnector.api.spec.artifact}"
+  version: "${restconnector.api.spec.version}"
+  spec: "resource::${api.group}:${api.artifact}:${api.version}:raml:zip:api.raml"
+  id: "0"
+
+# For testing scenarios
+test:
+  basepath: "/api/contact"
+
+# Components to configure:
+# - Salesforce connector
+# - TLS connector
+# - Splunk
+# - Mulesoft Gatekeeper (API Manager)
