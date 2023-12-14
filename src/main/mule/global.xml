@@ -31,17 +31,6 @@ http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/cu
 			port="${http.port}"
 			protocol="${httpprotocol}"/>
 	</http:listener-config>
-
-	<db:config 
-		name="Database_Config" 
-		doc:name="Database Config">
-		<db:mssql-connection
-    		host="${mssql.host}"
-    		port="1433"
-    		user="${mssql.user}"
-    		password="${mssql.pass}"
-    		databaseName="${mssql.name}" />
-	</db:config>
 	
 	<apikit:config
 		name="api-config"
