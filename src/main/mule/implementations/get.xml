@@ -147,13 +147,9 @@
 	</flow>
 
 	<flow name="get-by-id">
-		<logger doc:name="get by id"
-			level="INFO" 
-			message="#['Query by id']" 
-			category="app"/>
+		<logger doc:name="get by id" level="INFO" message="#['Query by id']" category="app"/>
 
-		<flow-ref doc:name="get by filter" 
-			name="get-by-filter"/>
+		<flow-ref doc:name="get by filter" name="get-by-filter"/>
 
 		<ee:transform doc:name="get one record" >
 			<ee:message >
